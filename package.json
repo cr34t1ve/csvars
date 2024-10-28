@@ -4,7 +4,7 @@
   "description": "CSS variable suggestions while you code",
   "publisher": "cr34t1ve",
   "repository": "https://github.com/cr34t1ve/csvars/",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.94.0"
   },
