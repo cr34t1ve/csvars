@@ -1,6 +1,6 @@
 {
   "name": "csvars",
-  "displayName": "css-variables-around",
+  "displayName": "csvars",
   "description": "CSS variable suggestions while you code",
   "publisher": "cr34t1ve",
   "repository": "https://github.com/cr34t1ve/csvars/",
@@ -9,7 +9,16 @@
     "vscode": "^1.94.0"
   },
   "categories": [
-    "Other"
+    "Programming Languages",
+    "Snippets",
+    "Formatters"
+  ],
+  "keywords": [
+    "css-variables",
+    "custom-properties",
+    "css-completion",
+    "css-intellisense",
+    "tailwind-css"
   ],
   "activationEvents": [
     "onLanguage:css",
