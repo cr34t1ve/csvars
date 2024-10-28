@@ -1,4 +1,4 @@
-# CSS Variables Predictor
+# CSVars - VSCODE CSS Variable Completions
 
 A Visual Studio Code extension that provides intelligent autocompletion for CSS custom properties (CSS variables) across your entire workspace. Get suggestions for all your CSS variables with their values and documentation while you type.
 
@@ -11,7 +11,7 @@ A Visual Studio Code extension that provides intelligent autocompletion for CSS 
 - 🔄 Real-time updates when CSS files change
 - ⚡ Works in CSS, SCSS, LESS, HTML, JSX, TSX, and Astro files
 
-![CSS Variables Predictor Demo](./src/assets/csvars_0.gif)
+![CSVars Demo](./src/assets/csvars_0.gif)
 
 ## Usage
 
