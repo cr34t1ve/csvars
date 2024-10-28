@@ -11,7 +11,7 @@ A Visual Studio Code extension that provides intelligent autocompletion for CSS 
 - 🔄 Real-time updates when CSS files change
 - ⚡ Works in CSS, SCSS, LESS, HTML, JSX, TSX, and Astro files
 
-![CSS Variables Predictor Demo](/assets/csvars_0.gif)
+![CSS Variables Predictor Demo](./src/assets/csvars_0.gif)
 
 ## Usage
 
@@ -25,7 +25,7 @@ Example completion:
 ```css
 .example {
   /* Start typing var( here */
-  color: var(❘); /* Completions will appear */
+  color: var( /* Completions will appear */
 }
 ```
 
@@ -63,12 +63,10 @@ It automatically indexes:
 
 ### Documentation View
 
-When you select a completion, you'll see:
+When you highlight a completion, you'll see:
 
 ```css
-.variable-name-auto {
-  --variable-name: value;
-}
+--variable-name         value
 ```
 
 Along with:
@@ -86,7 +84,7 @@ Along with:
 
 1. Open VS Code
 2. Go to Extensions (Ctrl+Shift+X / Cmd+Shift+X)
-3. Search for "CSS Variables Predictor"
+3. Search for "CSVars"
 4. Click Install
 
 ## Configuration
