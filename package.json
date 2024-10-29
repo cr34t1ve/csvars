@@ -2,9 +2,9 @@
   "name": "csvars",
   "displayName": "csvars",
   "description": "CSS variable suggestions while you code",
-  "publisher": "DesmondSofua",
+  "publisher": "cr34t1ve",
   "repository": "https://github.com/cr34t1ve/csvars/",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "engines": {
     "vscode": "^1.94.0"
   },
@@ -34,6 +34,7 @@
   "scripts": {
     "package": "pnpm vsce package --no-dependencies",
     "publish": "pnpm vsce publish --no-dependencies",
+    "publish-minor": "pnpm vsce publish minor --no-dependencies",
     "vscode:prepublish": "pnpm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
