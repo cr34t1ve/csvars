@@ -5,7 +5,7 @@
   "publisher": "cr34t1ve",
   "repository": "https://github.com/cr34t1ve/csvars/",
   "icon": "images/insignia256.png",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "engines": {
     "vscode": "^1.91.0"
   },
