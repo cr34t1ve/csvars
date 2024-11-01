@@ -36,6 +36,7 @@
     "package": "pnpm vsce package --no-dependencies",
     "publish": "pnpm vsce publish --no-dependencies",
     "publish-minor": "pnpm vsce publish minor --no-dependencies",
+    "publish-patch": "pnpm vsce publish patch --no-dependencies",
     "vscode:prepublish": "pnpm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
