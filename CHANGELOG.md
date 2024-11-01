@@ -1,9 +1,7 @@
 # Change Log
 
-All notable changes to the "csvars" extension will be documented in this file.
+## [0.2.1] - 2024-11-01
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+### Added
 
-## [Unreleased]
-
-- Initial release
+- Changed logo.
