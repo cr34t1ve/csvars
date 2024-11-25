@@ -5,3 +5,9 @@
 ### Added
 
 - Changed logo.
+
+## [0.3.0] - 2024-11-25
+
+### Added
+
+- Added Vue support for style section and inline support

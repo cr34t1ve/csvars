@@ -33,6 +33,7 @@ export function activate(context: vscode.ExtensionContext) {
     }
     return "other";
   }
+
   async function extractCSSVariables(filePath: string): Promise<CSSVariable[]> {
     const content = await readFile(filePath, "utf-8");
     const variables: CSSVariable[] = [];
@@ -115,6 +116,7 @@ export function activate(context: vscode.ExtensionContext) {
       "html",
       "javascriptreact",
       "typescriptreact",
+      "vue",  // Added Vue support
       "astro",
     ],
     {
@@ -126,7 +128,13 @@ export function activate(context: vscode.ExtensionContext) {
           .lineAt(position)
           .text.substr(0, position.character);
 
-        if (!linePrefix.includes("var(")) {
+        // Enhanced trigger condition for Vue files
+        const shouldTrigger = linePrefix.includes("var(") || 
+          (document.languageId === "vue" && 
+           (linePrefix.match(/<style.*>.*var\(/i) || // For <style> section
+            linePrefix.match(/style=".*var\(/i))); // For inline styles
+
+        if (!shouldTrigger) {
           return undefined;
         }
 
@@ -139,7 +147,10 @@ export function activate(context: vscode.ExtensionContext) {
             if (
               document.languageId === "css" ||
               document.languageId === "scss" ||
-              document.languageId === "less"
+              document.languageId === "less" ||
+              (document.languageId === "vue" && 
+               currentFilePath === variable.file && 
+               document.getText().includes("<style"))
             ) {
               return variable.file !== currentFilePath;
             }
@@ -197,7 +208,7 @@ export function activate(context: vscode.ExtensionContext) {
   );
 
   const watcher = vscode.workspace.createFileSystemWatcher(
-    "**/*.{css,scss,less}"
+    "**/*.{css,scss,less,vue}"  // Added .vue to file watcher
   );
 
   const updateVariablesDebounced = () => {
@@ -208,11 +219,11 @@ export function activate(context: vscode.ExtensionContext) {
         for (const folder of vscode.workspace.workspaceFolders) {
           const pattern = new vscode.RelativePattern(
             folder,
-            "**/*.{css,scss,less}"
+            "**/*.{css,scss,less,vue}"  // Added .vue to file pattern
           );
           const files = await vscode.workspace.findFiles(pattern);
 
-          log(`Found ${files.length} CSS files in workspace`);
+          log(`Found ${files.length} CSS and Vue files in workspace`);
 
           for (const file of files) {
             try {

@@ -9,7 +9,7 @@ A Visual Studio Code extension that provides intelligent autocompletion for CSS 
 - 📝 Shows variable values and comments in completions
 - 📍 Displays source file location for each variable
 - 🔄 Real-time updates when CSS files change
-- ⚡ Works in CSS, SCSS, LESS, HTML, JSX, TSX, and Astro files
+- ⚡ Works in CSS, SCSS, LESS, HTML, JSX, TSX, Vue and Astro files
 
 ![CSVars Demo](./src/assets/csvars_0.gif)
 
@@ -37,6 +37,7 @@ Example completion:
 - HTML (`.html`)
 - React (`.jsx`, `.tsx`)
 - Astro (`.astro`)
+- Vue (`vue`)
 
 ## Variable Detection
 
